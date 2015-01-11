@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+var program = require('commander');
+var colors = require('colors');
+var core = require('../lib/core');
+
+var showLogo = function() {
+  console.log("remiera".blue);
+}
+
+var main = function() {
+  program
+    .version(require('../package.json').version)
+    .option('-s, --search [search word]', 'Search')
+    .option('-i, --indexing [indexing target]', 'Search')
+    .usage('[options] <params>')
+    .parse(process.argv);
+
+  core.start(program);
+}
+
+main();
