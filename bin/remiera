@@ -4,16 +4,25 @@ var colors = require('colors');
 var core = require('../lib/core');
 
 var showLogo = function() {
-  console.log("remiera".blue);
+  console.log("   _____  ___    ____ ___    (_)  ___    _____  ____ _".blue);
+  console.log("  / ___/ / _ \\  / __ `__ \\  / /  / _ \\  / ___/ / __ `/".blue);
+  console.log(" / /    /  __/ / / / / / / / /  /  __/ / /    / /_/ /".blue);
+  console.log("/_/     \\___/ /_/ /_/ /_/ /_/   \\___/ /_/     \\__,_/".blue);
 }
 
 var main = function() {
   program
     .version(require('../package.json').version)
     .option('-s, --search [search word]', 'Search')
-    .option('-i, --indexing [indexing target]', 'Search')
+    .option('-i, --indexing [indexing target]', 'Indexing')
     .usage('[options] <params>')
     .parse(process.argv);
+
+  if (!program.search && !program.indexing) {
+    showLogo();
+    program.help();
+    process.exit(0);
+  }
 
   core.start(program);
 }
