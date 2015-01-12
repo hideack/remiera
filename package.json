@@ -8,7 +8,8 @@
     "colors": "^1.0.3",
     "commander": "^2.6.0",
     "hiredis": "^0.1.17",
-    "redis": "^0.12.1"
+    "redis": "^0.12.1",
+    "underscore": "^1.7.0"
   },
   "bin": {
     "remiera": "bin/remiera"
