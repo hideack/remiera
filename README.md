@@ -18,3 +18,17 @@ remiera is node.js & redis based simple full-text search engine.
     -s, --search [search word]        Search
     -i, --indexing [indexing target]  Indexing
 ```
+
+### Indexing
+- Building an Inverted Index with text file of the line.
+
+```
+$ remiera -i [file path]
+```
+
+### Search
+
+```
+$ remiera -s [query]
+```
+
