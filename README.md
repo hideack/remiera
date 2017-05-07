@@ -1,6 +1,8 @@
 remiera
 =======
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/hideack/remiera.svg)](https://greenkeeper.io/)
+
 remiera is node.js & redis based simple full-text search engine.
 
 ```
